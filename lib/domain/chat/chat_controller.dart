@@ -14,6 +14,8 @@ class ChatController {
   Ref _ref;
   ChatController(this._ref);
 
+  void findAllStream() {}
+
   void insert(ChatInsertReqDto dto) {
     Future<DocumentReference> futureDoc = _ref.read(chatFireStoreRespositoryProvider).insert(dto);
     futureDoc.then(
